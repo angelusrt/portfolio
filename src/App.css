@@ -1,0 +1,98 @@
+html {
+  background-color: #222831;
+}
+
+.App .Home--background {
+  margin-bottom: 500px;
+}
+
+.App .Home--background--glossy-window {
+  width: 87.5%;
+  height: 80vh;
+  margin-left: auto;
+  background-color: rgba(45, 64, 89, 0.3);
+  border-left-color: #44CA82;
+  border-bottom-color: #44CA82;
+  border-style: solid;
+  border-width: 0.125em;
+  border-bottom-left-radius: 1em;
+}
+
+.App .Home--background--navbar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-top: 5vh;
+  margin-left: 15%;
+}
+
+.App .Home--background--navbar--circle {
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.125em;
+  border-color: rgba(156, 191, 206, 0.5);
+}
+
+.App .Home--middleground {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  top: 10vh;
+  z-index: 2;
+}
+
+.App .Home--middleground--me {
+  margin-right: 16.66%;
+  margin-left: auto;
+  width: 31.25%;
+  height: 80vh;
+  border-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Home--foreground {
+  position: absolute;
+  width: 56.25%;
+  text-align: right;
+  top: 30vh;
+  z-index: 2;
+}
+
+.App .Home--foreground--social-medias {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.App .Home--foreground--social-medias--circle {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.125em;
+  border-color: #FFFFFF;
+}
+
+.App .Home--foreground--header {
+  display: block;
+  font-size: 8vw;
+  font-weight: 500;
+  font-family: "Quicksand";
+  color: #FFFFFF;
+}
+
+.App .Home--foreground--subheader {
+  display: block;
+  font-size: 2vw;
+  font-weight: 300;
+  font-family: "Poppins";
+  color: #EEEEEE;
+}
+/*# sourceMappingURL=App.css.map */

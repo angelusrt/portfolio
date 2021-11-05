@@ -1,0 +1,107 @@
+$color-green: #44CA82;//green
+$color-black: #222831;//Background
+$color-gray: #DBDBDB;//gray
+$color-brigth-gray: #EEEEEE;//brigth gray
+$color-dark-blue: #2D4059;//Dark blue
+$color-dark-blue-opaque: rgba(45, 64, 89, 0.3);//Dark blue opaque
+$color-brigth-blue-opaque: rgba(156, 191, 206, 0.5);//brigth blue opaque
+$color-white: #FFFFFF;//White
+$color-red: #CA4444;//Red
+
+html {
+  background-color: $color-black;
+}
+
+.App {
+  .Home{
+    &--background{
+      margin-bottom: 500px;
+      &--glossy-window{
+        width: 87.5%;
+        height: 80vh;
+        margin-left: auto;
+        background-color: $color-dark-blue-opaque;
+        border-left-color: $color-green;
+        border-bottom-color: $color-green;
+        border-style: solid;
+        border-width: 0.125em;
+        border-bottom-left-radius: 1em;
+      }
+      &--navbar{ 
+        display: inline-flex;
+        margin-top: 5vh;
+        margin-left: 15%;
+
+        &--circle{
+          margin-left: 15px;
+          width: 30px;
+          height: 30px;
+
+          border-radius: 100%;
+          border-style: solid;
+          border-width: 0.125em;
+          border-color: $color-brigth-blue-opaque;
+        }
+      }
+    }
+    
+    &--middleground{
+      position: absolute;
+      width: 100%;
+      text-align: right;
+      top: 10vh;
+      z-index: 2;
+
+      &--me{
+        margin-right: 16.66%;
+        margin-left: auto;
+        width: 31.25%;
+        height: 80vh;
+
+        border-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    &--foreground{
+      position: absolute;
+      width: 56.25%;
+      text-align: right;
+      top: 30vh;
+      z-index: 2;
+
+      &--social-medias{ 
+        display: inline-flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &--circle{
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+
+          border-radius: 100%;
+          border-style: solid;
+          border-width: 0.125em;
+          border-color: $color-white;
+        }
+      }
+
+      &--header{
+        display: block;
+        
+        font-size: 8vw;
+        font-weight: 500;
+        font-family: "Quicksand";
+        color: $color-white;
+      }
+      &--subheader{
+        display: block;
+        font-size: 2vw;
+        font-weight: 300;
+        font-family: "Poppins";
+        color: $color-brigth-gray;
+      }
+    } 
+  }
+}
