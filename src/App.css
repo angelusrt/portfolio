@@ -2,12 +2,14 @@ html {
   background-color: #222831;
 }
 
-.App .Home--background {
-  margin-bottom: 500px;
+.App .Home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.App .Home--background--glossy-window {
-  width: 87.5%;
+.App .Home .background .glossy-window {
+  width: calc(100vw - calc((100vw / 24) * 3));
   height: 80vh;
   margin-left: auto;
   background-color: rgba(45, 64, 89, 0.3);
@@ -18,15 +20,15 @@ html {
   border-bottom-left-radius: 1em;
 }
 
-.App .Home--background--navbar {
+.App .Home .background .navbar {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 5vh;
-  margin-left: 15%;
+  margin-left: calc((100vw / 24) * 4);
 }
 
-.App .Home--background--navbar--circle {
+.App .Home .background .navbar--circle {
   margin-left: 15px;
   width: 30px;
   height: 30px;
@@ -36,32 +38,32 @@ html {
   border-color: rgba(156, 191, 206, 0.5);
 }
 
-.App .Home--middleground {
+.App .Home .middleground {
   position: absolute;
   width: 100%;
   text-align: right;
-  top: 10vh;
+  top: 20vh;
   z-index: 2;
 }
 
-.App .Home--middleground--me {
-  margin-right: 16.66%;
+.App .Home .middleground .me {
+  margin-right: calc(100vw - calc((100vw / 24) * 20));
   margin-left: auto;
-  width: 31.25%;
-  height: 80vh;
+  width: calc(calc((100vw / 24) * 20) - calc((100vw / 24) * 12.5));
+  height: 70vh;
   border-radius: 2.5%;
   background-color: #2D4059;
 }
 
-.App .Home--foreground {
+.App .Home .foreground {
   position: absolute;
-  width: 56.25%;
+  width: calc((100vw / 24) * 13.5);
   text-align: right;
-  top: 30vh;
-  z-index: 2;
+  top: 40vh;
+  z-index: 3;
 }
 
-.App .Home--foreground--social-medias {
+.App .Home .foreground .social-medias {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -70,7 +72,7 @@ html {
   top: 0;
 }
 
-.App .Home--foreground--social-medias--circle {
+.App .Home .foreground .social-medias--circle {
   margin-left: 10px;
   width: 20px;
   height: 20px;
@@ -80,19 +82,329 @@ html {
   border-color: #FFFFFF;
 }
 
-.App .Home--foreground--header {
+.App .Home .foreground .header {
   display: block;
-  font-size: 8vw;
+  font-size: 16vmin;
   font-weight: 500;
   font-family: "Quicksand";
   color: #FFFFFF;
 }
 
-.App .Home--foreground--subheader {
+.App .Home .foreground .subheader {
   display: block;
-  font-size: 2vw;
+  font-size: 4vmin;
   font-weight: 300;
   font-family: "Poppins";
   color: #EEEEEE;
+}
+
+.App .Intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Intro .background {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 7.5 / 12);
+}
+
+.App .Intro .background .glossy-button {
+  width: calc(calc((100vw / 24) * 13.5) - calc((100vw / 24) * 10));
+  height: calc(100vh / 9);
+  margin-left: calc((100vw / 24) * 10);
+  background-color: rgba(45, 64, 89, 0.3);
+  border-color: #44CA82;
+  border-style: solid;
+  border-width: 0.125em;
+  border-radius: 1em;
+}
+
+.App .Intro .middleground {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 2 / 6);
+  z-index: 2;
+}
+
+.App .Intro .middleground .me {
+  margin-right: auto;
+  margin-left: calc((100vw / 24) * 4);
+  width: calc(calc((100vw / 24) * 11) - calc((100vw / 24) * 4));
+  height: calc(100vh * 8 / 12);
+  border-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Intro .foreground {
+  position: absolute;
+  width: 30%;
+  margin-left: calc((100vw / 24) * 10);
+  top: calc(100vh * 7 / 12);
+  z-index: 2;
+}
+
+.App .Intro .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 92px;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #FFFFFF;
+}
+
+.App .Intro .foreground .subheader {
+  display: block;
+  margin-bottom: calc(100vw / 48 * 1.5);
+  font-size: 4vmin;
+  font-weight: 300;
+  font-family: "Roboto";
+  line-height: 175%;
+  letter-spacing: 0.025em;
+  color: #EEEEEE;
+}
+
+.App .Intro .foreground .button {
+  display: block;
+  font-size: calc(4vmin / 3 * 4);
+  font-weight: 500;
+  font-family: "Roboto";
+  color: #44CA82;
+}
+
+.App .Presentation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Presentation .background {
+  position: absolute;
+  width: 100%;
+  top: -10vh;
+}
+
+.App .Presentation .background .mountain {
+  width: 100%;
+  height: calc(100vh * 10 / 12);
+  background-color: #44CA82;
+  border-radius: 1em;
+}
+
+.App .Presentation .middleground {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 4 / 12);
+  z-index: 2;
+}
+
+.App .Presentation .middleground .me {
+  margin-right: auto;
+  margin-left: calc((100vw / 24) * 12.5);
+  width: calc(calc((100vw / 24) * 20) - calc((100vw / 24) * 12.5));
+  height: calc(100vh * 10 / 12);
+  border-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Presentation .foreground {
+  position: absolute;
+  width: 25%;
+  margin-left: calc((100vw / 24) * 3);
+  top: calc(100vh * 9 / 12);
+  z-index: 2;
+}
+
+.App .Presentation .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #222831;
+}
+
+.App .Presentation .foreground .subheader {
+  display: block;
+  margin-bottom: calc(100vw / 48 * 1.5);
+  font-size: 4vmin;
+  font-weight: 300;
+  font-family: "Roboto";
+  line-height: 175%;
+  letter-spacing: 0.025em;
+  color: #222831;
+}
+
+.App .Skills {
+  position: relative;
+  margin-top: 10vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Skills .background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.App .Skills .background .frame {
+  width: calc(calc((100vw / 24) * 21) - calc((100vw / 24) * 4));
+  margin-left: calc((100vw / 24) * 4);
+  margin-right: calc(100vw - calc((100vw / 24) * 21));
+  height: calc(100vh * 11 / 12);
+  border-radius: 1em;
+  border-color: #44CA82;
+  border-style: solid;
+  border-width: 0.125em;
+  border-radius: 1em;
+}
+
+.App .Skills .middleground {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 8 / 12);
+  z-index: 2;
+}
+
+.App .Skills .middleground .showcase {
+  margin-right: calc(100vw - calc((100vw / 24) * 11));
+  margin-left: auto;
+  width: calc((100vw / 24) * 11);
+  height: calc(100vh * 10 / 12);
+  border-bottom-right-radius: 2.5%;
+  border-top-right-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Skills .foreground {
+  position: absolute;
+  width: 30%;
+  margin-left: calc(calc((100vw / 24) * 13.5) - (100vw / 24));
+  top: calc(100vh * 15.25 / 12);
+  z-index: 2;
+}
+
+.App .Skills .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  margin-left: calc(100vw / 24);
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #FFFFFF;
+}
+
+.App .Skills .foreground .button {
+  padding: calc(100vh / 48) calc(100vw / 24);
+}
+
+.App .Skills .foreground .button--header {
+  display: block;
+  font-size: 2vmin;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  font-family: "Roboto";
+  color: #DBDBDB;
+}
+
+.App .Skills .foreground .button--subheader {
+  display: block;
+  font-size: calc(4vmin * 5 / 6);
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  color: #EEEEEE;
+}
+
+.App .Resume {
+  position: relative;
+  margin-top: 40vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Resume .middleground {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 7 / 12);
+  z-index: 2;
+}
+
+.App .Resume .middleground .background {
+  margin-right: auto;
+  margin-left: calc((100vw / 24) * 3);
+  width: calc(calc((100vw / 24) * 12.5) - calc((100vw / 24) * 3));
+  height: calc(100vh * 11 / 12);
+  border-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Resume .foreground {
+  position: absolute;
+  width: 30%;
+  margin-left: calc(calc((100vw / 24) * 4) - (100vw / 24));
+  top: calc(100vh * 18 / 12);
+  z-index: 2;
+}
+
+.App .Resume .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  margin-left: calc(100vw / 24);
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #FFFFFF;
+}
+
+.App .Resume .foreground .button {
+  padding: calc(100vh / 48) calc(100vw / 24);
+}
+
+.App .Resume .foreground .button--header {
+  display: block;
+  font-size: 2vmin;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  font-family: "Roboto";
+  color: #DBDBDB;
+}
+
+.App .Resume .foreground .button--subheader {
+  display: block;
+  font-size: calc(4vmin * 5 / 6);
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  color: #EEEEEE;
+}
+
+.App .finale {
+  position: relative;
+  margin-top: 40vh;
+  height: 100vh;
+}
+
+.App .finale div {
+  position: absolute;
+  top: calc(100vh *  4);
+  width: 10vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=App.css.map */

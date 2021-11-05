@@ -8,16 +8,29 @@ $color-brigth-blue-opaque: rgba(156, 191, 206, 0.5);//brigth blue opaque
 $color-white: #FFFFFF;//White
 $color-red: #CA4444;//Red
 
+//$metric-width
+$first-width-ruler: calc((100vw / 24) * 3);
+$second-width-ruler: calc((100vw / 24) * 4);
+$third-width-ruler: calc((100vw / 24) * 10);
+$fourth-width-ruler: calc((100vw / 24) * 11);
+$fifth-width-ruler: calc((100vw / 24) * 12.5);
+$sixth-width-ruler: calc((100vw / 24) * 13.5);
+$seventh-width-ruler: calc((100vw / 24) * 20);
+$eighth-width-ruler: calc((100vw / 24) * 21);
+
 html {
   background-color: $color-black;
 }
 
 .App {
   .Home{
-    &--background{
-      margin-bottom: 500px;
-      &--glossy-window{
-        width: 87.5%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .background{
+      .glossy-window{
+        width: calc(100vw - #{$first-width-ruler});
         height: 80vh;
         margin-left: auto;
         background-color: $color-dark-blue-opaque;
@@ -27,16 +40,15 @@ html {
         border-width: 0.125em;
         border-bottom-left-radius: 1em;
       }
-      &--navbar{ 
+      .navbar{ 
         display: inline-flex;
         margin-top: 5vh;
-        margin-left: 15%;
+        margin-left: $second-width-ruler;
 
         &--circle{
           margin-left: 15px;
           width: 30px;
           height: 30px;
-
           border-radius: 100%;
           border-style: solid;
           border-width: 0.125em;
@@ -45,32 +57,31 @@ html {
       }
     }
     
-    &--middleground{
+    .middleground{
       position: absolute;
       width: 100%;
       text-align: right;
-      top: 10vh;
+      top: 20vh;
       z-index: 2;
 
-      &--me{
-        margin-right: 16.66%;
+      .me{
+        margin-right: calc(100vw - #{$seventh-width-ruler});
         margin-left: auto;
-        width: 31.25%;
-        height: 80vh;
-
+        width: calc(#{$seventh-width-ruler} - #{$fifth-width-ruler});
+        height: 70vh;
         border-radius: 2.5%;
         background-color: $color-dark-blue;
       }
     }
 
-    &--foreground{
+    .foreground{
       position: absolute;
-      width: 56.25%;
+      width: $sixth-width-ruler;
       text-align: right;
-      top: 30vh;
-      z-index: 2;
+      top: 40vh;
+      z-index: 3;
 
-      &--social-medias{ 
+      .social-medias{ 
         display: inline-flex;
         position: absolute;
         right: 0;
@@ -79,7 +90,6 @@ html {
           margin-left: 10px;
           width: 20px;
           height: 20px;
-
           border-radius: 100%;
           border-style: solid;
           border-width: 0.125em;
@@ -87,21 +97,332 @@ html {
         }
       }
 
-      &--header{
+      .header{
         display: block;
-        
-        font-size: 8vw;
+        font-size: 16vmin;
         font-weight: 500;
         font-family: "Quicksand";
         color: $color-white;
       }
-      &--subheader{
+      .subheader{
         display: block;
-        font-size: 2vw;
+        font-size: 4vmin;
         font-weight: 300;
         font-family: "Poppins";
         color: $color-brigth-gray;
       }
     } 
+  }
+
+  .Intro{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .background{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 7.5 / 12 );
+
+      .glossy-button{
+        width: calc(#{$sixth-width-ruler} - #{$third-width-ruler});
+        height: calc(100vh / 9);
+        //margin-top: calc(100vh * 7 / 12);
+        margin-left: $third-width-ruler;
+        background-color: $color-dark-blue-opaque;
+        border-color: $color-green;
+        border-style: solid;
+        border-width: 0.125em;
+        border-radius: 1em;
+      }
+    }
+    
+    .middleground{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 2 / 6);
+      z-index: 2;
+
+      .me{
+        margin-right: auto;
+        margin-left: $second-width-ruler;
+        width: calc(#{$fourth-width-ruler} - #{$second-width-ruler});
+        height: calc(100vh * 8 / 12);
+        border-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 30%;
+      margin-left: $third-width-ruler;
+      top: calc(100vh * 7 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+
+        line-height: 92px;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-white;
+      }
+
+      .subheader{
+        display: block;
+        margin-bottom: calc(100vw / 48 * 1.5);
+        font-size: 4vmin;
+        font-weight: 300;
+        font-family: "Roboto";
+        line-height: 175%;
+        letter-spacing: 0.025em;
+        color: $color-brigth-gray;
+      }
+
+      .button{
+        display: block;
+        font-size: calc(4vmin / 3 * 4);
+        font-weight: 500;
+        font-family: "Roboto";
+        color: $color-green;
+      }
+    } 
+  }
+
+  .Presentation{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .background{
+      position: absolute;
+      width: 100%;
+      top: -10vh;
+
+      .mountain{
+        width: 100%;
+        height: calc(100vh * 10 / 12);
+        background-color: $color-green;
+        border-radius: 1em;
+      }
+    }
+    
+    .middleground{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 4 / 12);
+      z-index: 2;
+
+      .me{
+        margin-right: auto;
+        margin-left: $fifth-width-ruler;
+        width: calc(#{$seventh-width-ruler} - #{$fifth-width-ruler});
+        height: calc(100vh * 10 / 12);
+        border-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 25%;
+      margin-left: $first-width-ruler;
+      top: calc(100vh * 9 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-black;
+      }
+
+      .subheader{
+        display: block;
+        margin-bottom: calc(100vw / 48 * 1.5);
+        font-size: 4vmin;
+        font-weight: 300;
+        font-family: "Roboto";
+        line-height: 175%;
+        letter-spacing: 0.025em;
+        color: $color-black;
+      }
+    } 
+  }
+
+  .Skills{
+    position: relative;
+    margin-top: 10vh;
+    width: 100%;
+    height: 100vh;
+
+    .background{
+      position: absolute;
+      width: 100%;
+      top: 0;
+
+      .frame{
+        width: calc(#{$eighth-width-ruler} - #{$second-width-ruler});
+        margin-left: $second-width-ruler;
+        margin-right: calc(100vw - #{$eighth-width-ruler});
+        height: calc(100vh * 11 / 12);
+        border-radius: 1em;
+        border-color: $color-green;
+        border-style: solid;
+        border-width: 0.125em;
+        border-radius: 1em;
+      }
+    }
+    
+    .middleground{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 8 / 12);
+      z-index: 2;
+
+      .showcase{
+        margin-right: calc(100vw - #{$fourth-width-ruler});
+        margin-left: auto;
+        width: $fourth-width-ruler;
+        height: calc(100vh * 10 / 12);
+        border-bottom-right-radius: 2.5%;
+        border-top-right-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 30%;
+      margin-left: calc(#{$sixth-width-ruler} - (100vw / 24));
+      top: calc(100vh * 15.25 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        margin-left: calc(100vw / 24);
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-white;
+      }
+
+      .button{
+        padding: calc(100vh / 48) calc(100vw / 24);
+        
+        &--header{
+          display: block;
+          font-size: 2vmin;
+          font-weight: 300;
+          margin-bottom: 0;
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          font-family: "Roboto";
+          color: $color-gray;
+        }
+
+        &--subheader{
+          display: block;
+          font-size: calc(4vmin * 5 / 6);
+          font-weight: 400;
+          font-family: "Roboto";
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          color: $color-brigth-gray;
+        }
+      }
+    } 
+  }
+
+  .Resume{
+    position: relative;
+    margin-top: 40vh;
+    width: 100%;
+    height: 100vh;
+    
+    .middleground{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 7 / 12);
+      z-index: 2;
+
+      .background{
+        margin-right: auto;
+        margin-left: $first-width-ruler;
+        width: calc(#{$fifth-width-ruler} - #{$first-width-ruler});
+        height: calc(100vh * 11 / 12);
+        border-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 30%;
+      margin-left: calc(#{$second-width-ruler} - (100vw / 24));
+      top: calc(100vh * 18 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        margin-left: calc(100vw / 24);
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-white;
+      }
+
+      .button{
+        padding: calc(100vh / 48) calc(100vw / 24);
+        
+        &--header{
+          display: block;
+          font-size: 2vmin;
+          font-weight: 300;
+          margin-bottom: 0;
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          font-family: "Roboto";
+          color: $color-gray;
+        }
+
+        &--subheader{
+          display: block;
+          font-size: calc(4vmin * 5 / 6);
+          font-weight: 400;
+          font-family: "Roboto";
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          color: $color-brigth-gray;
+        }
+      }
+    } 
+  }
+  .finale{
+    position: relative;
+    margin-top: 40vh;
+    height: 100vh;
+    
+    div{
+      position: absolute;
+      top: calc(100vh *  4);
+      width: 10vw;
+      height: 100vh;
+    }
   }
 }
