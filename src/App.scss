@@ -413,6 +413,176 @@ html {
       }
     } 
   }
+
+  .Languages{
+    position: relative;
+    margin-top: 20vh;
+    width: 100%;
+    height: 100vh;
+    
+    .background{
+      position: absolute;
+      width: 100%;
+      top: -10vh;
+
+      .glossy-window{
+        width: calc(#{$seventh-width-ruler} - #{$fourth-width-ruler});
+        margin-left: $fourth-width-ruler;
+        margin-right: calc(100vw - #{$seventh-width-ruler});
+        height: calc(100vh * 8 / 12);
+        border-radius: 1em;
+        border-color: $color-green;
+        border-style: solid;
+        border-width: 0.125em;
+        border-radius: 1em;
+      }
+    }
+
+    .middleground{
+      position: absolute;
+      width: 100%;
+      top: calc(100vh * 11.5 / 12);
+      z-index: 2;
+
+      .showcase{
+        margin-right: calc(100vw - #{$sixth-width-ruler});
+        margin-left: $second-width-ruler;
+        width: calc(#{$sixth-width-ruler} - #{$second-width-ruler});
+        height: calc(100vh * 9 / 12);
+        border-radius: 2.5%;
+        background-color: $color-dark-blue;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 30%;
+      margin-left: calc(#{$fourth-width-ruler});
+      top: calc(100vh * 26 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        margin-left: calc(#{$fifth-width-ruler} - #{$fourth-width-ruler});
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-white;
+      }
+
+      .button{
+        padding: calc(100vh / 48) calc(#{$fifth-width-ruler} - #{$fourth-width-ruler});
+        
+        &--header{
+          display: block;
+          font-size: 2vmin;
+          font-weight: 300;
+          margin-bottom: 0;
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          font-family: "Roboto";
+          color: $color-gray;
+        }
+
+        &--subheader{
+          display: block;
+          font-size: calc(4vmin * 5 / 6);
+          font-weight: 400;
+          font-family: "Roboto";
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          color: $color-brigth-gray;
+        }
+      }
+    } 
+  }
+
+  .Contact{
+    position: relative;
+    margin-top: 20vh;
+    width: 100%;
+    height: 100vh;
+    
+    .background{
+      position: absolute;
+      width: 100%;
+      top: -30vh;
+
+      .line1{
+        width: $fifth-width-ruler;
+        margin-right: auto;
+        height: calc(100vh * 11 / 12);
+        border-top-color: $color-green;
+        border-right-color: $color-green;
+        border-style: solid;
+        border-width: 0.125em;
+        border-top-right-radius: 1em;
+      }
+      .line2{
+        position: absolute;
+        top: calc(100vh * 8 / 12);
+        right: 0;
+        
+        width: calc(100vw - #{$eighth-width-ruler});
+        margin-left: auto;
+        height: calc(100vh * 3 / 12);
+        border-top-color: $color-red;
+        border-left-color: $color-red;
+        border-style: solid;
+        border-width: 0.125em;
+        border-top-left-radius: 1em;
+      }
+    }
+
+    .foreground{
+      position: absolute;
+      width: 30%;
+      margin-left: calc(#{$third-width-ruler});
+      top: calc(100vh * 29 / 12);
+      z-index: 2;
+
+      .header{
+        display: block;
+        margin-bottom: calc(100vw / 48);
+        margin-left: calc(#{$fourth-width-ruler} - #{$third-width-ruler});
+        font-size: calc(16vmin / 3 * 2);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        font-family: "Empire Straight";
+        color: $color-white;
+      }
+
+      .button{
+        padding: calc(100vh / 48) calc(#{$fourth-width-ruler} - #{$third-width-ruler});
+        
+        &--header{
+          display: block;
+          font-size: 2vmin;
+          font-weight: 300;
+          margin-bottom: 0;
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          font-family: "Roboto";
+          color: $color-gray;
+        }
+
+        &--subheader{
+          display: block;
+          font-size: calc(4vmin * 5 / 6);
+          font-weight: 400;
+          font-family: "Roboto";
+          line-height: 29px;
+          letter-spacing: 0.025em;
+          color: $color-brigth-gray;
+        }
+      }
+    } 
+  }
+
   .finale{
     position: relative;
     margin-top: 40vh;

@@ -395,6 +395,175 @@ html {
   color: #EEEEEE;
 }
 
+.App .Languages {
+  position: relative;
+  margin-top: 20vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Languages .background {
+  position: absolute;
+  width: 100%;
+  top: -10vh;
+}
+
+.App .Languages .background .glossy-window {
+  width: calc(calc((100vw / 24) * 20) - calc((100vw / 24) * 11));
+  margin-left: calc((100vw / 24) * 11);
+  margin-right: calc(100vw - calc((100vw / 24) * 20));
+  height: calc(100vh * 8 / 12);
+  border-radius: 1em;
+  border-color: #44CA82;
+  border-style: solid;
+  border-width: 0.125em;
+  border-radius: 1em;
+}
+
+.App .Languages .middleground {
+  position: absolute;
+  width: 100%;
+  top: calc(100vh * 11.5 / 12);
+  z-index: 2;
+}
+
+.App .Languages .middleground .showcase {
+  margin-right: calc(100vw - calc((100vw / 24) * 13.5));
+  margin-left: calc((100vw / 24) * 4);
+  width: calc(calc((100vw / 24) * 13.5) - calc((100vw / 24) * 4));
+  height: calc(100vh * 9 / 12);
+  border-radius: 2.5%;
+  background-color: #2D4059;
+}
+
+.App .Languages .foreground {
+  position: absolute;
+  width: 30%;
+  margin-left: calc(calc((100vw / 24) * 11));
+  top: calc(100vh * 26 / 12);
+  z-index: 2;
+}
+
+.App .Languages .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  margin-left: calc(calc((100vw / 24) * 12.5) - calc((100vw / 24) * 11));
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #FFFFFF;
+}
+
+.App .Languages .foreground .button {
+  padding: calc(100vh / 48) calc(calc((100vw / 24) * 12.5) - calc((100vw / 24) * 11));
+}
+
+.App .Languages .foreground .button--header {
+  display: block;
+  font-size: 2vmin;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  font-family: "Roboto";
+  color: #DBDBDB;
+}
+
+.App .Languages .foreground .button--subheader {
+  display: block;
+  font-size: calc(4vmin * 5 / 6);
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  color: #EEEEEE;
+}
+
+.App .Contact {
+  position: relative;
+  margin-top: 20vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.App .Contact .background {
+  position: absolute;
+  width: 100%;
+  top: -30vh;
+}
+
+.App .Contact .background .line1 {
+  width: calc((100vw / 24) * 12.5);
+  margin-right: auto;
+  height: calc(100vh * 11 / 12);
+  border-top-color: #44CA82;
+  border-right-color: #44CA82;
+  border-style: solid;
+  border-width: 0.125em;
+  border-top-right-radius: 1em;
+}
+
+.App .Contact .background .line2 {
+  position: absolute;
+  top: calc(100vh * 8 / 12);
+  right: 0;
+  width: calc(100vw - calc((100vw / 24) * 21));
+  margin-left: auto;
+  height: calc(100vh * 3 / 12);
+  border-top-color: #CA4444;
+  border-left-color: #CA4444;
+  border-style: solid;
+  border-width: 0.125em;
+  border-top-left-radius: 1em;
+}
+
+.App .Contact .foreground {
+  position: absolute;
+  width: 30%;
+  margin-left: calc(calc((100vw / 24) * 10));
+  top: calc(100vh * 29 / 12);
+  z-index: 2;
+}
+
+.App .Contact .foreground .header {
+  display: block;
+  margin-bottom: calc(100vw / 48);
+  margin-left: calc(calc((100vw / 24) * 11) - calc((100vw / 24) * 10));
+  font-size: calc(16vmin / 3 * 2);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.025em;
+  font-family: "Empire Straight";
+  color: #FFFFFF;
+}
+
+.App .Contact .foreground .button {
+  padding: calc(100vh / 48) calc(calc((100vw / 24) * 11) - calc((100vw / 24) * 10));
+}
+
+.App .Contact .foreground .button--header {
+  display: block;
+  font-size: 2vmin;
+  font-weight: 300;
+  margin-bottom: 0;
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  font-family: "Roboto";
+  color: #DBDBDB;
+}
+
+.App .Contact .foreground .button--subheader {
+  display: block;
+  font-size: calc(4vmin * 5 / 6);
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 29px;
+  letter-spacing: 0.025em;
+  color: #EEEEEE;
+}
+
 .App .finale {
   position: relative;
   margin-top: 40vh;

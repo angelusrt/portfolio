@@ -254,6 +254,112 @@ function App() {
           </div>
         </div>
       </section>
+      <section className="Languages">
+        <div 
+          className="background"
+          style={{
+            transform: `translateY(${offsetY * 0.5}px)`
+          }}
+        >
+          <div className="glossy-window"/>
+        </div>
+
+        <div 
+          className="middleground"
+          style={{
+            transform: `translateY(${offsetY * 0.4}px)`
+          }}
+        >
+          <div className="showcase"/>
+        </div>
+
+        <div 
+          className="foreground"
+          style={{
+            transform: `translateY(${offsetY * 0.3}px)`
+          }}
+        >
+          <text className="header">
+            idiomas
+          </text>
+          
+          <div className="button">
+            <text className="button--header">
+              Nativo
+            </text>
+            <text className="button--subheader">
+              Português
+            </text>
+          </div>
+
+          <div className="button">
+            <text className="button--header">
+              Nível avançado
+            </text>
+            <text className="button--subheader">
+              Inglês
+            </text>
+          </div>
+
+          <div className="button">
+            <text className="button--header">
+              Nível básico
+            </text>
+            <text className="button--subheader">
+              Alemão
+            </text>
+          </div>
+        </div>
+      </section>
+      <section className="Contact">
+        <div 
+          className="background"
+          style={{
+            transform: `translateY(${offsetY * 0.5}px)`
+          }}
+        >
+          <div className="line1"/>
+          <div className="line2"/>
+        </div>
+
+        {/* <div 
+          className="middleground"
+          style={{
+            transform: `translateY(${offsetY * 0.4}px)`
+          }}
+        >
+          <div className="showcase"/>
+        </div> */}
+
+        <div 
+          className="foreground"
+          style={{
+            transform: `translateY(${offsetY * 0.3}px)`
+          }}
+        >
+          <text className="header">
+            Contato
+          </text>
+          
+          <div className="button">
+            <text className="button--header">
+              Telefone
+            </text>
+            <text className="button--subheader">
+              (81) 99564-0616
+            </text>
+          </div>
+
+          <div className="button">
+            <text className="button--header">
+              Email
+            </text>
+            <text className="button--subheader">
+              angelusrt@gmail
+            </text>
+          </div>
+        </div>
+      </section>
       <div className="finale">
         <div/>
       </div>
